@@ -76,6 +76,9 @@ class config:
 			self.config.get("osuapi", "apiurl")
 			self.config.get("osuapi", "apikey")
 
+			self.config.get("beatconnect", "enable")
+			self.config.get("beatconnect", "apikey")
+
 			self.config.get("cheesegull", "apiurl")
 
 			self.config.get("discord", "enable")
@@ -83,6 +86,8 @@ class config:
 			self.config.get("discord", "devgroup")
 			self.config.get("discord", "secretwebhook")
 			self.config.get("discord", "ahook")
+			self.config.get("discord", "score")
+			self.config.get("discord", "rxscore")
 
 			self.config.get("cono", "enable")
 
@@ -140,6 +145,10 @@ class config:
 		self.config.set("osuapi", "apiurl", "https://osu.ppy.sh")
 		self.config.set("osuapi", "apikey", "YOUR_OSU_API_KEY_HERE")
 
+		self.config.add_section("beatconnect")
+		self.config.set("beatconnect", "enable", "False")
+		self.config.set("beatconnect", "enable", "")
+
 		self.config.add_section("cheesegull")
 		self.config.set("cheesegull", "apiurl", "http://cheesegu.ll/api")
 
@@ -149,6 +158,8 @@ class config:
 		self.config.set("discord", "devgroup", "")
 		self.config.set("discord", "secretwebhook", "")
 		self.config.set("discord", "ahook", "")
+		self.config.set("discord", "score", "")
+		self.config.set("discord", "rxscore", "")
 
 		self.config.add_section("cono")
 		self.config.set("cono", "enable", "False")
